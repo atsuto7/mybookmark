@@ -1,0 +1,133 @@
+// Place all the styles related to the url controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #eee;
+}
+.form-box {
+  width: 70%;
+  height: 700px;
+  background-color: white;
+  margin: auto;
+  position: relative;
+  top: 50px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  .title {
+    width: 50%;
+    margin: auto;
+    height: 70px; 
+    padding-top: 20px;
+    border-bottom: solid 2px #57c3e9;
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+    color: #666;
+  }
+  input,text {
+    font-size: 20px !important;
+    padding: 0 50px;
+    width: calc(100% - 100px) !important;
+    position: relative;
+    left: 50px;
+  }
+  .memo-field {
+    width: 50% !important;
+    float: right;
+    position: absolute;
+    bottom: 180px;
+    right: 20px;
+  .memo-box {
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-family: "游ゴシック", "YuGothic";
+    font-size: 20px;
+    margin: 0 50px;
+    float: right;
+    height: 350px !important;
+  }
+}
+  .tag-field {
+    width: 45% !important;
+    .defined-result-border {
+      border: 3px solid gray;
+      border-radius: 15px; 
+      margin: 0 50px;
+      height: 200px;
+      overflow: auto;
+      .field-title {
+        font-size: 20px;
+      }
+      .defined-result {
+        overflow: auto;
+        .defined-search-result-element {
+          background-color: white;
+          font-size: 20px;
+          line-height: 40px;
+          height: 40px;
+          border-bottom: 1px solid rgb(179, 179, 179);
+          color: rgb(94, 94, 94);
+          .tag-search-remove {
+            color: red;
+            float: right;
+            position: relative;
+            bottom: 50px;
+            font-size: 15px;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+    input,text {
+      border: 1px solid gray;
+      border-radius: 5px;
+      font-family: "游ゴシック", "YuGothic";
+      font-size: 20px;
+      margin: 0 0 0 0 !important; 
+    }
+    .create-new-tag {
+      z-index: 3;
+      color: #57c3e9;
+      position: absolute;
+      top: 365px;
+      left: 340px;
+    }
+    .post-research__tag-search-result {
+      width: calc(100% - 100px);
+      height: 300px;
+      overflow: auto;
+      margin-left: 50px;
+      .post-search-result-element {
+        background-color: white;
+        font-size: 20px;
+        line-height: 40px;
+        height: 40px;
+        border-bottom: 1px solid rgb(179, 179, 179);
+        color: rgb(94, 94, 94);
+        .url-tag__btn {
+          color: #57c3e9;
+          float: right;
+          position: relative;
+          bottom: 50px;
+          line-height: center;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .input-btn {
+    text-align: center;
+  input {
+    background-color: #57C3E9;
+    border-radius: 20px;
+    color: #fff;
+    border: 0;
+    font-size: 18px;
+    height: 50px;
+    width: 150px !important;
+    margin: auto;
+    position: absolute;
+    left: 425px;
+    bottom: 50px;
+  }
+}
+}

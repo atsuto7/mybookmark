@@ -1,0 +1,46 @@
+<div class="header">
+  <div class="right-header">
+    <div class="right-header__title">
+      <a class="title-link" href="/"> 
+        <p>bookmark!!!</p>
+      </a>
+    </div>
+    <div class="right-header__form">
+      <%= form_tag('/tags/search', method: :get) do %>
+        <input class="search-tag" name="keyword" placeholder="タグ名で検索" type="text" value="" autocomplete="off">
+        <input type="text" name="dummy" style="display:none;">
+        <input type="button" style="display:none;">
+      <% end %>
+      <div id="sarch-tag-result">
+      </div>
+    </div>
+    <div class="btns">
+      <div class="btns__signout-submit">
+        <%= link_to 'ログアウト', "/users/sign_out", method: :delete %>
+      </div>
+      <a href="/urls/new"><div class="btns__post-submit">
+        <p>ページ登録</p>
+      </div></a>
+    </div>
+  </div>
+  <div class="left-header">
+    <div class="user-name">
+      <p><%= current_user.name %></p>
+    </div>
+    <div class="user-edit">
+      <form class="user-edit__submit">
+        <a href="<%=edit_user_path(current_user)%>"><i class="fas fa-cog"></i></a>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="mein-content">
+  <div class="side-bar">
+    <div class="side-bar__submits">
+      <%= link_to '詳細な検索', search_urls_path()  %>
+    </div>
+  </div>
+  <div class="url-content">
+    <%= render @urls %>
+  </div>
+</div>

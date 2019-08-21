@@ -1,0 +1,12 @@
+<div class="search-result-content">
+  <%= render partial: 'url', locals: {url: searchContent}%>
+  <div class="search-result-content__text">
+    <div class="search-result-content__text__title">
+      <h1><%= searchContent.title %></h1>
+    </div>
+    <div class="search-result-content__text__memo">
+      <h2><%= highlight("#{searchContent.memo}", "#{keyword}") %></h2>
+    </div>
+  </div>
+</div>
+

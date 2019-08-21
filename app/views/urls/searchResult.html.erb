@@ -1,0 +1,43 @@
+<div class="header">
+  <div class="right-header">
+    <div class="right-header__title">
+      <a class="title-link" href="/"> 
+        <p>bookmark!!!</p>
+      </a>
+    </div>
+    <div class="right-header_searchResult">
+      <%= form_tag('/urls/searchResult', method: :get) do %>
+        <input class="search-keyword" name="keyword" placeholder="メモの本文から検索" type="text" value="" autocomplete="off">
+        <%= button_tag '', class: "searchResult_button fas fa-search", value: "&#xf002"%>
+      <% end %>
+      <div id="sarch-tag-result">
+      </div>
+    </div>
+    <div class="btns">
+      <div class="btns__signout-submit">
+        <%= link_to 'ログアウト', "/users/sign_out", method: :delete %>
+      </div>
+      <a href="/urls/new"><div class="btns__post-submit">
+        <p>ページ登録</p>
+      </div></a>
+    </div>
+  </div>
+  <div class="left-header">
+    <div class="user-name">
+      <p><%= current_user.name %></p>
+    </div>
+    <div class="user-edit">
+      <form class="user-edit__submit">
+        <a href="<%=edit_user_path(current_user)%>"><i class="fas fa-cog"></i></a>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="mein-content">
+  <% if @searchContents.present?%>
+    <p class="search-keyword"><%= "#{@keyword}"%>の検索結果</p>
+  <% else %>
+    <p class="search-keyword"><%= "#{@keyword}"%>の検索結果はありません</p>
+  <% end %>
+  <%= render partial: "searchContent", collection: @searchContents, locals: {keyword: @keyword}%>
+</div>
